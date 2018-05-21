@@ -1,0 +1,432 @@
+/* ----------------------------- fonts--------------------------------- */
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: leaguespartan-bold;
+    src: url('fonts/leaguespartan-bold.ttf');
+}
+
+/*--------------------------for all pages------------------------------*/
+.wrapper{
+    width: 10000px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 42px 55px 45px 55px;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background: #fff952;
+    background: -webkit-linear-gradient(45deg, #444444, #fff);
+    background: -o-linear-gradient(45deg, #444444, #fff);
+    background: -moz-linear-gradient(45deg, #444444, #fff);
+    background: linear-gradient(45deg, #444444, #fff);
+    
+}
+
+
+/* --------------------------------  banner ----------------------------- */
+
+.banner{
+    float:left;
+    display:inline;
+    background-color:#fff952;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border:0;
+    overflow:hidden;
+    width: 100%;
+}
+.banner img{
+    position: absolute;
+    display:inline;
+    margin: 0;
+    padding: 0;
+    border:0;
+    overflow:hidden;
+    height:150px;
+}
+.cylinder{
+    float:right;
+    background:#fff952;
+    position:relative;}
+
+.cylinders img{
+    opacity:0.8
+    display:flex;
+    float:right;
+    position:relative;
+    width:100%
+    overflow:hidden;
+    
+    -webkit-animation:spin 3s ease-in-out 1;
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation: spin 3s ease-in-out 1;
+    animation-direction: alternate;
+    
+}
+@-webkit-keyframes spin {
+    0%  { -webkit-transform: rotate(45deg); }
+    50%  { -webkit-transform: rotate(-90deg); }
+}
+
+@keyframes spin {
+    0% {-webkit-transform: rotate(45deg); transform:rotate(45deg);}
+    50% {-webkit-transform: rotate(-90deg); transform:rotate(-90deg);}
+    
+}
+
+.im1{
+    z-index:1;
+    transform:translateY(90px);
+}
+.im2{ z-index:2;
+    transform: translateY(-20px);
+    transform:rotate(200deg);
+    }
+.im3{
+    z-index:3;
+    transform:rotate(80deg);
+    
+}
+.im4{
+    z-index:4;
+    transform:rotate(-130deg);
+}
+.im5{
+    z-index:5;
+    transform:rotate(30deg);
+   
+}
+
+/*-------------------menu bar di id -----------------*/
+
+#menubar{
+    background-color:#fff952;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border:0;
+    overflow:hidden;
+    width: 100%;
+}
+
+#menubar img:last-of-type{
+    position: absolute;
+    right: 0.5em;
+}
+
+/*menu bar and overflow*/
+#menubar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: #333333;/*charcoal*/
+}
+/*menu links */
+#menubar li {
+    float: left;
+    background-color: #333333;/*charcoal*/
+    
+}
+/* all menu links such as "galleries" or artist name */
+#menubar li a {
+    display: block;
+    text-decoration: none;
+    margin: 0px;
+    border: 0px;
+    padding: 10px 24px;
+    font-size:1.8em;
+    font-family: leaguespartan-bold;
+    text-align: center;
+}
+/*menu links such as "galleries" on hover */
+#menubar li a:hover {
+    color:#fff952;
+}
+
+/*dropdown content surface*/
+#menubar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#333333;/*grey*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/*makes sure the dropdown displays nicely*/
+#menubar .dropdown:hover .dropdown-content {
+    display: block;
+}
+/*dropdown content elements such as artist names*/
+#menubar .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/*dropdown elements such as artist name on hovers*/
+#menubar .dropdown-content a:hover {
+    background-color:#fff952 /*yellow*/;
+    color:#333333; /*grey*/;
+}
+
+/*active link*/
+#menubar .active{
+    background-color: #fff952;
+    color:#333333;
+}
+#menubar .active:hover{
+    background-color: #fff952;
+    color:#333333;
+}
+
+
+/*----------------------------menu bar----------------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+a {
+    font-family: Poppins-Bold;
+    font-size: 1em;
+    line-height: 1.7;
+    color: white;
+    margin: 0px;
+    
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: leaguespartan-bold;
+    margin: 0px;
+}
+
+p {
+    font-family: Poppins-Regular;
+    font-size: 1em
+    color: #666666;
+    margin: 0px;
+}
+
+/*------------------------- image slide show on index page----------------*/
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    11.11%   { opacity: 1; }
+    33.33%  { opacity: 1; }
+    44.44%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.fadein img {
+    opacity:0;
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    position : absolute;
+    left:0;
+
+   }
+
+.fadein img:nth-child(1) { animation-delay: 0s; }
+.fadein img:nth-child(2) { animation-delay: 5s; }
+.fadein img:nth-child(3) { animation-delay: 10s; }
+.fadein img:nth-child(4) { animation-delay: 15s; }
+.fadein img:nth-child(5) { animation-delay: 20s; }
+
+
+/*------------------- table_container for table of shows and list galleries-------------*/
+
+.wrapper img{
+    margin:0em;
+    margin-top:0em;
+    border-radius:10px;
+}
+.wrapper table {
+    margin-left:3em;
+    margin-right:3em;
+    text-decoration: none;
+    text-align:left;
+    float: center;
+    display: block;
+    font-size:1em;
+}
+.wrapper table, th {
+    font-family: leaguespartan-bold;
+    text-align:left;
+    font-size: 1em;
+    padding-bottom:0;
+}
+.wrapper table, td{
+    font-family: Poppins-Regular;
+    font-size: 1em;
+}
+
+.wrapper td:last-of-type{
+    padding-bottom:3em;
+}
+.f{
+    list-style-image: url('images/cyl1.jpg');}
+
+/*-------------------------- grid of artists---------------------------------*/
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    margin:6.5%;
+    flex: 20%;
+    max-width: 20%;
+    padding:20px;
+    
+}
+.column .cell
+{
+    display: inline;
+    margin-top: 30%;
+
+}
+
+.cell image{
+    opacity :1.0
+}
+
+
+#cell span {
+    display: block;
+    vertical-align: middle;
+    color: white;
+    font-size: 2em;
+    font-family: Poppins-Reguar, sans-serif;
+    position:relative;
+    text-align:center;
+    bottom: 120px;
+    visibility:hidden;
+}
+
+#cell:hover span {
+    visibility:visible;
+}
+
+
+#cell:hover img {
+    opacity: 0.7;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/* Responsive layout - makes a two column-layout instead of three columns */
+@media (max-width: 400px) {
+    .column {
+        -ms-flex: 40%;
+        flex: 40%;
+        max-width: 40%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 200px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 60%;
+    }
+}
+/*-------------------contact--------------------*/
+.contact_title {
+    display: block;
+    font-family: leaguespartan-bold;
+    font-size: 2.5em;
+    color: #444444;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.input_label {
+    font-family: Poppins-Regular;
+    font-size: 0.8em;
+    color: #444444;
+    line-height: 1.5;
+    padding-left:0.5em;
+    padding-bottom: 5em;
+}
+
+.input {
+    border:none;
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Poppins-Regular;
+    font-size: 1em;
+    color: #111111;
+    line-height: 1.2;
+    padding: 0 5px;
+   
+}
+
+.input:last-of-type {
+    padding-bottom:3em;
+}
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 30%;
+    height: 50px;
+    
+    font-family: Poppins-Regular;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1.2;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top:2em;
+    margin-left: 35%;
+    background: #fff952;
+   
+}
+
